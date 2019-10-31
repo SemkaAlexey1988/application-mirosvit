@@ -1,0 +1,57 @@
+@import '../common/variables/variables.scss';
+
+.test {
+    border: 2px solid #e8e3e3;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    }
+    
+.test h3 {
+    @include h3-tag;
+    }
+
+.events{
+    @include container;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;    
+}
+.events__left {
+flex-basis: 30%;
+}
+.events__right {
+flex-basis: 70%;
+padding: 20px;
+}
+.events_info {
+font-size: 20px !important;
+font-style: italic;
+}
+.mobile-menu {
+display: none;    
+}
+.desktop-menu {
+display: block;    
+}
+
+@media screen and (min-width:300px) and (max-width:767px) {
+
+.mobile-menu {
+display: block;    
+}
+.desktop-menu {
+display: none;    
+}
+.events {
+flex-wrap: wrap;    
+}    
+.events__left {
+flex-basis: 100%;
+order: 2;
+}
+.events__right {
+flex-basis: 100%;
+order: 1;
+}
+}

@@ -1,0 +1,10 @@
+@import '../../../common/variables/variables.scss';
+
+.about {
+    @include container; 
+    margin-top: 30px;
+margin-bottom: 30px;  
+}
+.about h2 {
+    @include h2-tag;   
+}

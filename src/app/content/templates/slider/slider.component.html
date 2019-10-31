@@ -1,0 +1,20 @@
+<div class="slider" *ngIf="loadGallery; else loader">
+<ngb-carousel>
+  <ng-template ngbSlide *ngFor="let gallery of listGallery">
+    <div class="img-wrapper">
+      <img src="{{gallery.src}}" alt="{{gallery.alt}}">
+    </div>
+    <div class="carousel-caption">
+      <h3>{{gallery.name}}</h3>
+      <p>{{gallery.description}}</p>
+    </div>
+  </ng-template>
+  
+</ngb-carousel>
+
+</div>
+
+<ng-template #loader>
+    <div class="loader load-slider"></div>
+  </ng-template>
+

@@ -1,0 +1,39 @@
+<header class="site-header">
+    <div class="site-header__container">
+            <div class="site-header__first" #mobileMenu>
+<a class="mobile-menu_toggle" (click)="toggleMenuMain(mobileMenuMain)" ><i class="fas fa-bars"></i></a>	
+	                
+<ul class="site-header__menu-left" [ngClass]="statusMain ? 'activeited' : 'disabled'" >
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Main</a></li>
+    <li><a routerLink="/events" routerLinkActive="active">Events</a></li>
+    <li><a routerLink="/contacts" routerLinkActive="active">Contacts</a></li>
+    <li class="in-mobile"><a routerLink="/signin" routerLinkActive="active">Sign in</a></li>
+    <li class="in-mobile"><a routerLink="/registration" routerLinkActive="active">Registration</a></li>
+</ul>
+
+                </div>
+
+<div class="site-header__second">
+    <a class="logo" routerLink="/"><img src="../../assets/images/logo.png" alt="logo"></a>
+</div>
+
+<div class="site-header__third">
+
+    <ul *ngIf="showAuthorizationInfo" class="site-header__menu-right">
+        <li><a routerLink="/signin" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Sign in</a></li>
+        <li><a routerLink="/registration" routerLinkActive="active">Registration</a></li>
+        </ul>
+        
+        <div *ngIf="showUserInfo" class="curent-user" #userBlock>
+        <p class="logout" (click)="toggleMenu(curentUserMenu)">{{userName}} {{userSurname}}</p>
+        <ul class="curent-user__menu" [ngClass]="status ? 'activeited' : 'disabled'" #curentUserMenu>
+            <li><a class="logout" (click)="logOut()">Log out</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+     
+        
+    </div>
+  </header>

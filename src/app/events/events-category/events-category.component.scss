@@ -1,0 +1,471 @@
+@import '../../common/variables/variables.scss';
+
+
+.events h2 {
+    @include h2-tag;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+.events__params {
+    display: flex;
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $grayColor;
+    padding-bottom: 10px;
+}
+.events__sort {
+    flex-basis: 50%;
+}
+.events__search {
+flex-basis: 50%;
+}
+.events__sort form {
+max-width: 200px;
+}
+.events__search form {
+    max-width: 200px;
+    float: right;   
+}
+.events__search form::after {
+content: '';
+display: block;
+clear: both;
+} 
+.events__element {
+margin-bottom: 20px;
+}   
+.events__content {
+    border: 2px solid $blackColor !important;
+    border-radius: 10px;
+    padding: 20px;  
+    position: relative;  
+    background: #FFF;
+}
+.events__content.old .events__dates-finish {
+    color: $redCalor !important;   
+}
+.events__content .events__manager {
+position: absolute;
+width: 100%;
+max-width: 100px;
+bottom: 0;
+left: calc(50% - 50px);
+text-align: center;
+line-height: 30px;
+border-top: 2px solid $blackColor;
+border-left: 2px solid $blackColor;
+border-right: 2px solid $blackColor;
+border-radius: 5px 5px 0 0;
+}
+ 
+.events__manager span {
+    padding: 0 5px;
+} 
+.events__content h3 {
+@include h3-tag;
+} 
+
+.events__dates-start {
+display: block; 
+}
+.events__dates-finish {
+display: block;   
+}
+.events__dates span {
+line-height: 30px;  
+display: inline-block;
+vertical-align: top;     
+    }
+.events__dates i {
+line-height: 30px;   
+display: inline-block;
+vertical-align: top; 
+margin: 0 3px 0 1px;
+    }    
+.events__titles {
+font-weight: bold; 
+margin-right: 2px;   
+} 
+.events__content.completed .events__titles {
+ color: $blackColor;   
+}  
+.events__content.completed .events__dates-finish {
+color: $blackColor !important;   
+}  
+.events__dates-start, .events__dates-finish{
+margin-bottom: 5px;    
+} 
+.events__text ul, .events__text ol {
+padding-left: 20px;    
+}
+.events__text p {
+margin-bottom: 5px;
+}
+.events__status {
+margin-bottom: 5px;
+}
+.events__status span {
+margin: 0 5px;
+}
+.events-start {
+position: relative;   
+}
+.dm-modal input {
+height: 40px;
+line-height: 40px;   
+}
+.events-start input {
+height: 30px;
+line-height: 30px;
+width: 150px;
+padding-left: 40px; 
+}
+.events-finish input {
+height: 30px;
+line-height: 30px;
+width: 150px;
+padding-left: 40px;  
+}
+.mat-icon-button {
+background: transparent;
+padding: 0;
+min-width: 0;
+width: 30px;
+height: 30px;
+flex-shrink: 0;
+line-height: 30px;
+border-radius: 50%;
+}
+.events-timepicker {
+margin-left: 10px;    
+}
+
+.mat-datepicker-toggle {
+position: absolute;
+top: 26px;
+background: transparent;
+height: 30px;
+width: 30px;
+left: 5px; 
+    } 
+.events-finish .mat-datepicker-toggle {
+        top: 18px;
+            } 
+.event__status label {
+margin-bottom: 0;    
+}            
+
+.events-finish {
+position: relative;   
+}
+.events-finish input {
+border: 1px solid $blackColor;
+outline: 0;
+border-radius: 0;
+}
+.events_timewrap {
+position: relative; 
+display: inline-block;
+vertical-align: top;   
+}   
+
+.events-start input {
+    border: 1px solid $blackColor;
+    outline: 0;
+    border-radius: 0;
+    }
+
+.category__show-edit {
+    margin: 10px auto;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    max-width: 150px;
+    height: 40px;
+    line-height: 36px;
+    text-align: center;
+    border: 2px solid $blackColor;
+    background: $blackColor;
+    color: $whiteColor !important;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+&:hover{
+    color: $blackColor !important;
+    background: $whiteColor;
+    } 
+}
+.category__text {
+font-size: 18px;
+padding-top: 25px;
+padding-bottom: 5px;    
+}
+.events__dates-start .material-icons {
+margin-left: 10px;
+}
+.events__edit i {
+cursor: pointer;    
+}
+.events__delete i {
+cursor: pointer;    
+}
+.events__times i {
+    margin: 0 3px;
+    margin-left: 3px !important;
+}
+.events-datepicker {
+    display: inline-block;
+    vertical-align: top;
+}
+.events-timepicker {
+    display: inline-block;
+    vertical-align: top;
+}
+.events_timewrap input {
+    background: url(../../../assets/images/clock.png) $whiteColor no-repeat;
+    background-position: 8px center;
+    cursor: pointer;
+    }
+.events-label {
+  display: block;  
+}
+.events-finish label {
+    margin-bottom: 0;
+}
+.mat-datepicker-content .mat-calendar {
+    background: #FFF !important;
+    border: 1px solid gray !important;
+    border-radius: 10px !important;
+}
+
+.events__content .events__error-date {
+    display: none; 
+    color: $redCalor;
+    font-style: italic;
+    line-height: 20px;
+    padding: 5px 0;
+ }
+
+.events__content.old .events__error-date {
+   display: block; 
+}
+
+
+@mixin manage-links {
+    cursor: pointer;
+    margin-left: 5px;
+    }
+
+.category__edit {
+    @include manage-links;
+}
+
+.category__delete {
+    @include manage-links;
+}
+
+.submit {
+    cursor: pointer;   
+}
+
+.reset {
+    cursor: pointer;  
+    margin-left: 5px;
+}
+
+.dm-overlay,
+.dm-overlay_second
+ {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.65);
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.dm-overlay:target,
+.dm-overlay_second:target
+ {
+    display: block;
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+    z-index: 999999999;
+}
+.dm-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.dm-cell {
+    display: table-cell;
+    padding: 0 1em;
+    vertical-align: middle;
+    text-align: center;
+}
+.dm-modal
+ {
+   display: inline-block;
+padding: 20px;
+width: 100%;
+max-width: 800px;
+height: auto;
+background: #f9f9f9;
+-webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+color: #0C0B0B;
+text-align: left;
+font-size: 14px;
+z-index: 9999;
+border-radius: 5px;
+position: relative;
+}
+.dm-modal .submit {
+    cursor: pointer;
+    float: right;
+    margin-bottom: 15px;
+}
+.dm-modal .submit::after {
+content: "";
+display: block;
+clear: both;
+}
+.dm-modal h2 {
+@include h2-tag;
+}
+
+.closes {
+text-align: center;
+font-size: 22px;
+cursor: pointer;
+width: 22px;
+height: 22px;
+position: absolute;
+right: 7px;
+top: 7px;
+line-height: 22px;
+}
+
+.category__show-edit {
+cursor: pointer;    
+}
+
+.dm-overlay.activeited{
+	display: block;
+}
+
+.dm-overlay.disabled{
+	display: none;
+}
+
+.eventstart_edit.activeited {
+    display: block;
+}
+.eventstart_edit.disabled {
+    display: none;
+}
+.eventstart_add.activeited {
+    display: block;
+}
+.eventstart_add.disabled {
+    display: none;
+}
+.hide-input input {
+pointer-events:none;
+}
+
+.form-control {
+    height: 100%;
+}    
+
+.completed {
+background: gray;   
+background: linear-gradient(to top, #fefcea, #f4f3e7);
+}
+
+.old {
+ border: 1px solid black;   
+}
+.middle.past{
+border: 1px solid black;   
+}
+
+@media screen and (min-width:300px) and (max-width:991px) {
+.dm-modal {
+    overflow-y: scroll;
+    height: 600px;
+    } 
+}
+
+@media screen and (min-width:300px) and (max-width:479px) {
+.events__params {
+flex-wrap: wrap;   
+}
+.events__sort {
+flex-basis: 100%;
+margin-bottom: 10px;   
+}
+.events__sort form {
+width: 100%;
+max-width: 300px;  
+}
+.events__search {
+flex-basis: 100%;
+margin-bottom: 10px;   
+    }
+.events__search form {
+float: none;
+width: 100%;
+max-width: 300px;
+}    
+}    
+
+@media screen and (min-width:300px) and (max-width:399px) {
+.events__dates-start .material-icons {
+    margin-left: 0px;
+}
+.events__titles {
+    display: block !important;  
+}
+.events__dates {
+    display: block !important;     
+}
+.events__times {
+    display: block !important;     
+}
+.events__dates-start .events__times i {
+    margin-left: 0 !important;
+    margin-right: 3px !important;
+}
+.events__dates-finish .events__times i {
+    margin-left: 0 !important;
+    margin-right: 3px !important;
+}
+.events__dates i {
+    margin-left: 0;
+    margin-right: 7px !important;
+}
+.events-datepicker {
+    display: block;
+    margin: 10px auto;
+}
+.events_timewrap  {
+    display: block;
+    margin: 10px auto;
+}
+.events_timewrap input  {
+    margin-left: 0;
+}
+}
+

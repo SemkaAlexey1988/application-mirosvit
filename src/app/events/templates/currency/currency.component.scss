@@ -1,0 +1,35 @@
+@import '../../../common/variables/variables.scss';
+.currency {
+border: 2px solid #e8e3e3;
+padding: 15px;
+border-radius: 10px;
+margin-top: 20px;
+}
+
+.currency h3 {
+@include h3-tag;
+}
+.currency__description {
+font-size: 15px;
+}
+.currency__element {
+border-bottom: 1px dashed $grayColor;
+}
+.currency__element img {
+    display: inline-block;    
+    vertical-align: top; 
+    margin-top: 11px;
+}
+.currency__code {
+    line-height: 33px;
+    font-size: 16px;    
+    font-weight: 600;   
+    display: inline-block;    
+    vertical-align: top;    
+    padding: 0 20px;    
+}
+.currency__value {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 33px;
+}

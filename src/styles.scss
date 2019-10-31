@@ -1,0 +1,236 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'app/common/variables/variables.scss';
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+header, nav, section, main, article, aside, footer {
+    display: block;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    color: #2e343a;
+    margin: 0;
+    padding: 0;
+    #{$font}: $font-prociono;
+}
+body .site {
+    #{$font}: $font-prociono;
+}   
+
+body .site h1,
+body .site h2,
+body .site h3
+{
+    #{$font}: $font-staatliches;
+    letter-spacing: 1.2px;
+} 
+h1{
+
+}
+h2{
+
+}
+br
+{
+
+}
+p
+{
+
+}
+img{
+max-width:100%;
+height:auto;
+}
+body ul {
+    margin-bottom: 0;
+}
+
+
+
+
+.cke_wysiwyg_div ul {
+    padding: 10px 30px !important;
+}
+.cke_wysiwyg_div ol {
+    padding: 10px 30px !important;
+}
+.cke_wysiwyg_div ul li {
+    list-style-type: revert !important;
+}
+.cke_wysiwyg_div p {
+    padding: 10px !important;
+}
+
+.mat-datepicker-content {
+    overflow: hidden !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    top: 0 !important;
+    z-index: 999999 !important;
+} 
+
+.mat-icon-button {
+    background: transparent;
+    padding: 0;
+    min-width: 0;
+    width: 30px !important;
+    height: 30px !important;
+    flex-shrink: 0;
+    line-height: 30px !important;
+    border-radius: 50%;
+    }
+    .mat-datepicker-toggle {
+    position: absolute;
+    top: 28px;
+    background: transparent;
+    height: 30px;
+    width: 30px;
+    left: 5px; 
+        }  
+
+.carousel .carousel-indicators li {
+    width: 20px;
+    height: 20px ;
+    border-radius: 50%;
+    display: block;
+    border-top: 0;
+    border-bottom: 0;
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(163,153,163,1);
+-moz-box-shadow: 1px 1px 1px 0px rgba(163,153,163,1);
+box-shadow: 1px 1px 1px 0px rgba(163,153,163,1);
+ }
+
+ .carousel .carousel-control-next-icon, .carousel .carousel-control-prev-icon {
+    width: 30px;
+    height: 30px;
+}
+
+
+//Date picker
+.mat-datepicker-content .mat-calendar {
+    background: #FFF !important;
+    border: 1px solid gray !important;
+    border-radius: 10px !important;
+}
+
+.mat-calendar-previous-button, .mat-calendar-next-button {
+    cursor: pointer !important;
+    margin-top: 5px !important;  
+    display: inline-block !important;
+    }
+.mat-calendar-previous-button::after {
+border-left-width: 0px !important;
+transform: translateX(0) rotate(0);
+-moz-transform: translateX(0) rotate(0); 
+-ms-transform: translateX(0) rotate(0);
+-webkit-transform: translateX(0) rotate(0); 
+-o-transform: translateX(0) rotate(0);
+
+}
+.mat-calendar-next-button::after {
+border-right-width: 0px !important;
+transform: translateX(0) rotate(0);
+-moz-transform: translateX(0) rotate(0); 
+-ms-transform: translateX(0) rotate(0);
+-webkit-transform: translateX(0) rotate(0); 
+-o-transform: translateX(0) rotate(0);
+}
+.mat-calendar-previous-button .mat-button-ripple {
+border-top: 2px solid #333;
+border-radius: 0 !important;
+border-left: 2px solid #333;
+transform: rotate(-45deg);
+-moz-transform: rotate(-45deg); 
+-ms-transform: rotate(-45deg); 
+-webkit-transform: rotate(-45deg); 
+-o-transform: rotate(-45deg);
+width: 20px;
+height: 20px;
+margin-top: 5px;
+}
+.mat-calendar-next-button .mat-button-ripple {
+border-top: 2px solid #333;
+border-radius: 0 !important;
+border-left: 2px solid #333;
+transform: rotate(135deg);
+-moz-transform: rotate(135deg); 
+-ms-transform: rotate(135deg); 
+-webkit-transform: rotate(135deg); 
+-o-transform: rotate(135deg);
+width: 20px;
+height: 20px;
+margin-top: 5px;
+    }
+
+.mat-calendar-body-label {
+display: none !important;    
+} 
+.mat-datepicker-content .mat-calendar {
+    width: 296px !important;
+    height: 354px !important;
+    left: calc(50% - 148px) !important;
+    position: absolute !important;
+    bottom: calc(50% - 177px) !important;
+}
+
+body .cdk-live-announcer-element.cdk-visually-hidden {
+    dislay: none !important;
+    visibility: hidden !important;
+}
+
+//Date picker    
+
+
+
+
+.advantages-block__list li span i {
+    font-size: 24px;
+    }
+.events__text ul, .events__text ol {
+    padding-left: 20px;    
+    }
+    .events__text p {
+    margin-bottom: 5px;
+    }
+.events__text {    
+    margin-bottom: 1.5rem;      
+}
+
+.dm-modal .form-control {
+padding: 0;   
+}
+.dm-modal input.form-control {
+padding-left: 10px;   
+    }
+
+.curent-user {
+line-height: 30px;
+    }    
+
+@media screen and (min-width:300px) and (max-width:991px) {
+.advantages-block__list li span i {
+        font-size: 22px;  
+        position: relative;
+        top: 3px;   
+        } 
+#modal-block-second{
+            overflow-y: scroll;
+            height: 600px;
+            }       
+        
+        }     

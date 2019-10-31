@@ -1,0 +1,213 @@
+@import '../../../common/variables/variables.scss';
+
+@mixin buttons ($value, $middle) {
+position: absolute;
+display: block;
+top: $middle;
+width: $value;
+height: $value;
+line-height: $value;
+text-align: center;
+padding-bottom: 0px;
+}
+
+
+.instagram-widget {
+position: relative;
+}
+
+div#carousel { 
+    perspective: 1200px; 
+    -webkit-perspective: 1200px;
+    -ms-perspective: 1200px; 
+    -o-perspective: 1200px;
+background: $blackColor;
+padding-top: 50px;
+font-size: 0;
+overflow: hidden;
+}
+figure#spin { 
+    
+    transform-style: preserve-3d; 
+    -webkit-transform-style: preserve-3d; 
+    -ms-transform-style: preserve-3d; 
+    -o-transform-style: preserve-3d;
+    min-height: 122px; 
+    transform-origin: 50% 50% -500px; 
+    -moz-transform-origin: 50% 50% -500px; 
+    -ms-transform-origin: 50% 50% -500px; 
+    -webkit-transform-origin: 50% 50% -500px; 
+    -o-transform-origin: 50% 50% -500px;
+    transition: 1s; 
+    height: 450px;
+    margin: 0;
+}
+figure#spin .carousel__element { 
+    width: 100%;
+    position: absolute;
+    left: calc(50% - 215px);
+    transform-origin: 50% 50% -500px; 
+    -moz-transform-origin: 50% 50% -500px; 
+    -ms-transform-origin: 50% 50% -500px; 
+    -webkit-transform-origin: 50% 50% -500px; 
+    -o-transform-origin: 50% 50% -500px;
+    outline: 1px solid transparent; 
+    max-width: 400px;
+    padding: 0;
+    
+}
+
+figure#spin .carousel__element img {
+    width: 100%; 
+    border: 2px solid white;
+}    
+
+
+figure#spin > div:nth-child(1) { 
+    transform:rotateY(0deg); 
+    -moz-transform:rotateY(0deg); 
+    -ms-transform:rotateY(0deg); 
+    -webkit-transform:rotateY(0deg); 
+    -o-transform:rotateY(0deg); 
+
+}
+figure#spin > div:nth-child(2) { 
+    transform:rotateY(-45deg); 
+    -moz-transform:rotateY(-45deg); 
+    -ms-transform:rotateY(-45deg); 
+    -webkit-transform:rotateY(-45deg); 
+    -o-transform:rotateY(-45deg);
+
+}
+figure#spin > div:nth-child(3) { 
+    transform:rotateY(-90deg); 
+    -moz-transform:rotateY(-90deg); 
+    -ms-transform:rotateY(-90deg); 
+    -webkit-transform:rotateY(-90deg); 
+    -o-transform:rotateY(-90deg);
+
+}
+figure#spin > div:nth-child(4) { 
+    transform:rotateY(-135deg);
+    -moz-transform:rotateY(-135deg); 
+    -ms-transform:rotateY(-135deg); 
+    -webkit-transform:rotateY(-135deg); 
+    -o-transform:rotateY(-135deg);
+
+}
+figure#spin > div:nth-child(5) { 
+    transform:rotateY(-180deg); 
+    -moz-transform:rotateY(-180deg); 
+    -ms-transform:rotateY(-180deg); 
+    -webkit-transform:rotateY(-180deg); 
+    -o-transform:rotateY(-180deg);
+
+}
+figure#spin > div:nth-child(6) { 
+    transform:rotateY(-225deg);
+    -moz-transform:rotateY(-225deg); 
+    -ms-transform:rotateY(-225deg); 
+    -webkit-transform:rotateY(-225deg); 
+    -o-transform:rotateY(-225deg); 
+
+}
+figure#spin > div:nth-child(7) { 
+    transform:rotateY(-270deg); 
+    -moz-transform:rotateY(-270deg); 
+    -ms-transform:rotateY(-270deg); 
+    -webkit-transform:rotateY(-270deg); 
+    -o-transform:rotateY(-270deg);
+
+}
+figure#spin > div:nth-child(8) { 
+    transform:rotateY(-315deg);
+    -moz-transform:rotateY(-315deg); 
+    -ms-transform:rotateY(-315deg); 
+    -webkit-transform:rotateY(-315deg); 
+    -o-transform:rotateY(-315deg);
+
+}
+
+.carousel__manager_left {
+@include buttons(40px, calc(50% - 20px));    
+left: 20px;
+}
+
+.carousel__manager_right {
+@include buttons(40px, calc(50% - 20px));    
+right: 20px;
+    }
+
+.carousel__manager_left i, .carousel__manager_right i {
+color: $whiteColor;
+cursor: pointer;
+font-size: 40px;
+}    
+
+@media screen and (min-width:300px) and (max-width:991px) {
+    figure#spin .carousel__element { 
+        width: 100%;
+        position: absolute;
+        left: calc(50% - 200px);
+        max-width: 400px;      
+        padding: 0; 
+    }          
+
+}   
+
+@media screen and (min-width:300px) and (max-width:767px) {
+    div#carousel { 
+    max-width: 400px;
+    margin: 0 auto;
+}
+.instagram-widget {
+    background: $blackColor;
+    }
+}    
+
+@media screen and (min-width:300px) and (max-width:479px) {
+    .instagram-widget {
+        background: $whiteColor;
+        }
+    div#carousel { 
+    max-width: 300px;
+    margin: 0 auto;
+    background: $whiteColor;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    }
+
+    figure#spin .carousel__element { 
+        width: 100%;
+        position: absolute;
+        left: 0;
+        max-width: 300px;
+        padding: 0;   
+        height: auto;   
+    } 
+
+    figure#spin {
+        height: 300px;
+        min-height: 300px; 
+        padding-top: 0px;
+    }    
+
+    .carousel__manager_left {
+    @include buttons(30px, calc(50% - 15px));    
+    left: 5px;
+    }
+                
+    .carousel__manager_right {
+    @include buttons(30px, calc(50% - 15px));    
+    right: 5px;
+    }
+
+
+    .carousel__manager_left i, .carousel__manager_right i {
+    color: $blackColor;
+    font-size: 30px;
+        }  
+                     
+
+
+}

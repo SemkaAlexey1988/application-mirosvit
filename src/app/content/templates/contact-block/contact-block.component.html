@@ -1,0 +1,67 @@
+<div class="contact-block" id="contact-block" [ngClass]="{'show-block': showContent}">
+    <div class="contact-block__content">
+  <div class="contact-block__text">
+ <p class="contact-text">Fill out the form to contact us</p>
+</div>
+<div class="contact-block__button">
+  <div class="contact-button" (click)="showModal()">
+    <span>Contact us</span>
+ <div class="hover-efect"></div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="dm-overlay_second" [ngClass]="statusModal ? 'activeited' : 'disabled'" (click)="closeModalBlock($event)">
+  <div class="dm-table">
+  <div class="dm-cell">
+  <div class="dm-modal_second" id="modal-block-second" #modalBlock>
+  <div class="closes_second"  (click)="closeModal()"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+<h3>{{titleForm}}</h3>  
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-contacts">
+ 
+  <p class="success" *ngIf="messageSuccess">You message successfully sended!</p>  
+    
+  <div class="form-group">
+  <label>Name</label>
+  <input type="text" class="form-control" placeholder="name" [value]="nameValue" [formControlName]="'name'" 
+  [ngClass]="{'input-error': form.get('name').invalid && form.get('name').touched}" onfocus="this.placeholder = ''">	
+  <p class="error" *ngIf="form.get('name').invalid && form.get('name').touched">
+    <span class="error" *ngIf="form.get('name')['errors']['required']">The name field must not be empty.</span>
+    <span class="error" *ngIf="form.get('name')['errors']['shortValueError']"> The name field must be at least 3 characters.</span>
+    <span class="error" *ngIf="form.get('name')['errors']['pattern']"> Invalid characters used for name field.</span>
+  </p>
+  </div>
+  
+  <div class="form-group">
+  <label>E-mail</label>
+  <input type="text" class="form-control" placeholder="Your e-mail" [value]="emailValue" [formControlName]="'email'" 
+  [ngClass]="{'input-error': form.get('email').invalid && form.get('email').touched}" onfocus="this.placeholder = ''">	
+  <p class="error" *ngIf="form.get('email').invalid && form.get('email').touched">
+    <span class="error" *ngIf="form.get('email')['errors']['required']">The e-mail field must not be empty.</span>
+    <span class="error" *ngIf="form.get('email')['errors']['email']"> Invalid e-mail format.</span>
+    </p>  
+  </div>
+
+  <div class="form-group">
+    <label>Message</label>
+    <textarea type="text" class="form-control" placeholder="Your message" [value]="messageValue" [formControlName]="'message'" 
+    [ngClass]="{'input-error': form.get('message').invalid && form.get('message').touched}" onfocus="this.placeholder = ''"></textarea>	
+    <p class="error" *ngIf="form.get('message').invalid && form.get('message').touched">
+      <span class="error" *ngIf="form.get('message')['errors']['required']">The message field must not be empty.</span>
+      </p>   
+    </div>
+  
+ 
+
+
+  <button class="btn btn-success" type="submit" id="regButton" [disabled]="form.invalid">{{buttonForm}}</button>
+           
+  </form>
+
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,48 @@
+@import '../../../common/variables/variables.scss';
+
+.advantages-block {
+@include container;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.advantages-block__list {
+list-style-type: none;
+}
+.advantages-block__list li {
+line-height: 40px;
+font-size: 32px;
+padding: 10px 0;
+}  
+
+.advantages-block__list li span i {
+font-size: 24px;
+}  
+.advantages-block h2 {
+@include h2-tag; 
+}  
+  
+@media screen and (min-width:300px) and (max-width:991px) {
+.advantages-block__list li {
+line-height: 30px;
+font-size: 22px;   
+}
+.advantages-block__list li span i {
+font-size: 22px;  
+position: relative;
+top: 3px;   
+} 
+} 
+
+@media screen and (min-width:300px) and (max-width:767px) {
+    .advantages-block__list li span { 
+        display: inline-block;
+        vertical-align: top;   
+    }
+    .advantages-block__list li span:first-child { 
+     width: 30px;   
+    }
+    .advantages-block__list li span:last-child { 
+    width: calc(100% - 30px);    
+    } 
+}     

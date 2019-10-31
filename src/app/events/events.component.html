@@ -1,0 +1,26 @@
+<app-header-events></app-header-events>
+<div class="events">
+  
+    <div class="events__left">
+    <div class="desktop-menu" *ngIf="desktopMenu">
+        <app-categories-menu></app-categories-menu>
+    </div>
+        <app-currency></app-currency>
+        <app-weather></app-weather>
+      <!--  <div class="test">
+        <app-test [personSurname]="surname" >Hello, {{name}}!</app-test>
+        <button (click)="plus()">+</button>
+        <button (click)="minus()">-</button>
+    </div> -->
+    </div>
+    <div class="events__right">
+            <div class="mobile-menu" *ngIf="mobileMenu">
+            <app-categories-menu></app-categories-menu>
+            </div>
+            <router-outlet></router-outlet>
+<p appColor selectedColor="black" [defaultColor]="'black'" class="events_info">You are in the events section. Here you can add your event or task in your personal account of this application.</p>    
+    </div>
+  
+  
+</div>
+

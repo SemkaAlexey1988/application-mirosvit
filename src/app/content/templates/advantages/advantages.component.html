@@ -1,0 +1,10 @@
+<div class="advantages-block" *ngIf="listAdvantages; else loader">
+ <h2>Benefits of the event app:</h2> 
+<ul class="advantages-block__list">
+<li *ngFor="let advantages of listAdvantages"><span  [innerHTML]="advantages.icon"></span> <span> {{advantages.name}}</span></li>
+</ul>  
+  </div>
+  
+<ng-template #loader>
+    <div class="load"></div>
+  </ng-template>

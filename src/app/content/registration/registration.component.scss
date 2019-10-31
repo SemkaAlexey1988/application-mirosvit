@@ -1,0 +1,99 @@
+@import '../../common/variables/variables.scss';
+
+@mixin butt {
+    color: #FFFFFF;
+    margin-right: 5px;
+}
+
+    .user__delete {
+        @include butt;
+    }
+
+    .user__edit {
+        @include butt;
+    }
+    .registration{
+        @include container;
+    }
+    .registration__form {
+        @include middle;
+        border: 1px solid $grayColor;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+    .registration h2 {
+        @include h2-tag; 
+        margin-top: 10px;
+    }
+
+    .phone-code li {
+    display: none;    
+    }
+
+    .phone-code li.on {
+    display: block;    
+    }
+    #imulation {
+        display: block !important;    
+        }  
+    #regButton {
+        margin-top: 20px;
+        max-width: 100px;
+        width: 100%;
+    }  
+    .phone {
+        position: relative;    
+    } 
+    .phone__select {
+        position: absolute;
+        width: 100%;
+        max-width: 80px;
+        left: 10px;
+        height: 38px;
+        line-height: 38px;
+        cursor: pointer;
+    } 
+    .phone__country {
+        display: inline-block;
+        vertical-align: top;
+    }  
+    .phone__icon {
+        display: inline-block !important;
+        vertical-align: top;
+        line-height: 38px !important;
+        padding-left: 10px;
+    }  
+    .phone__input {
+        padding-left: 90px;
+    } 
+    .phone-code {
+        position: absolute;
+        top: 70px;
+        background: #FFF;
+        width: 100%;
+        max-width: 80px;
+        border-left: 1px solid $grayColor;
+        border-right: 1px solid $grayColor;
+    }
+    .phone-code li {
+        padding-left: 10px;
+    }
+    .phone-code li:last-child {
+        border-bottom: 1px solid $grayColor;
+    }
+    .phone-code li {
+    cursor: pointer;
+    }
+    
+    ::-webkit-input-placeholder {font-size: 1rem !important; font-style: normal !important;}
+    ::-moz-placeholder          {font-size: 1rem !important; font-style: normal !important;}
+    :-moz-placeholder           {font-size: 1rem !important; font-style: normal !important;}
+    :-ms-input-placeholder      {font-size: 1rem !important; font-style: normal !important;}   
+
+
+
+@media screen and (min-width:300px) and (max-width:768px) {
+
+}    

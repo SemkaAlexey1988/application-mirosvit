@@ -1,0 +1,36 @@
+@import '../../common/variables/variables.scss';
+
+@mixin butt {
+    color: #FFFFFF;
+    margin-right: 5px;
+}
+    .user__delete {
+        @include butt;
+    }
+
+    .user__edit {
+        @include butt;
+    }
+    .signin{
+        @include container;
+    }
+    .signin__form {
+        @include middle;
+        border: 1px solid $grayColor;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .signin h2 {
+        @include h2-tag; 
+        margin-top: 10px;
+    }
+    .not-registered {
+    padding-top: 10px;    
+    }
+
+
+
+@media screen and (min-width:300px) and (max-width:768px) {
+
+}  

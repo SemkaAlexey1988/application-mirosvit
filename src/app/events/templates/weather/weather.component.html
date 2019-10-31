@@ -1,0 +1,20 @@
+<div *ngIf="loadWeather; else loader" class="weather">
+  <h3>Weather</h3>
+  <div *ngFor="let descWeather of currentWeather; let i=index" class="weather__content">
+ <!-- {{i + 1}} -->
+ <p *ngFor="let weatherDescription of descWeather.weather.slice(startIndex, 1)" class="weather__icon">
+  <img src="http://openweathermap.org/img/wn/{{weatherDescription.icon}}@2x.png" alt="{{weatherDescription.main}}">
+  <span>{{weatherDescription.main}}</span>
+</p>
+ <div class="weather__wrap">
+<p class="weather__city"> {{descWeather.name}}</p>
+<p class="weather__temperature"> {{descWeather.main.temp}} ℃</p>
+</div>
+<p class="weather__date">{{date | date:'MM.dd.y'}}</p>
+</div> 
+
+</div>
+  
+  <ng-template #loader>
+    <div class="load"></div>
+  </ng-template>

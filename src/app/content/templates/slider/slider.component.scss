@@ -1,0 +1,37 @@
+@import '../../../common/variables/variables.scss';
+
+.img-wrapper img {
+   width: 100%; 
+   filter: brightness(0.9);
+}
+.carousel-caption h3 {
+   font-size: 50px;
+   text-shadow: 3px 2px 2px $blackColor;
+   font-weight: 600;
+   text-transform: uppercase;
+   #{$font}: $font-staatliches;
+}
+.carousel-caption p {
+   font-size: 22px;
+   text-shadow: 3px 2px 2px $blackColor;
+}
+.carousel-indicators li {
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   display: block;
+}
+.carousel .carousel-control-next-icon, .carousel .carousel-control-prev-icon {
+   width: 30px;
+   height: 30px;
+}
+
+
+@media screen and (min-width:300px) and (max-width:479px) {
+   .carousel-caption h3 {
+      font-size: 30px;
+   }
+   .carousel-caption p {
+      font-size: 16px;
+   }  
+}

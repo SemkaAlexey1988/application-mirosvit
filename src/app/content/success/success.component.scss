@@ -1,0 +1,17 @@
+@import '../../common/variables/variables.scss';
+
+.success-block {
+    @include container;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    }
+    .success-block h2 {
+    @include h2-tag;
+    text-align: center;
+    width: 100%;
+        }
+    .success-block p {
+     font-size: 20px;
+     text-align: center;   
+    }    
+   

@@ -1,0 +1,66 @@
+@import '../../../common/variables/variables.scss';
+
+.contacts {
+@include container;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.contacts h2 {
+@include h2-tag;
+    }
+.contacts-block {
+display: flex;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.contacts-block__left {
+flex-basis: 30%;
+padding-right: 10px;
+} 
+
+.contacts-block__right {
+flex-basis: 70%;
+} 
+.contacts-block__left p a {
+ color: $blackColor;
+ font-size: 15px;
+ line-height: 22px;
+ display: block;   
+}
+.contacts-block__left p a i {
+padding-right: 5px;
+padding-left: 5px;
+}
+.contacts-block__left p a i.fa-phone {
+padding-left: 0px;    
+-moz-transform: rotate(90deg); 
+-ms-transform: rotate(90deg); 
+-webkit-transform: rotate(90deg); 
+-o-transform: rotate(90deg); 
+transform: rotate(90deg);
+}  
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    .contacts-block__left {
+        flex-basis: 50%;   
+        }    
+        .contacts-block__right {
+        flex-basis: 50%;   
+            } 
+} 
+
+@media screen and (min-width:300px) and (max-width:767px) {
+.contacts-block{
+flex-wrap: wrap;
+    }
+.contacts-block__left {
+flex-basis: 100%;   
+}    
+.contacts-block__right {
+flex-basis: 100%;   
+    } 
+.contacts-block__left i {
+padding-right: 5px;
+padding-left: 0px;   
+    }    
+}    

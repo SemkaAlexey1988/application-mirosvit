@@ -1,0 +1,20 @@
+
+<div *ngIf="loadWidget; else loader">
+
+<div class="instagram-widget">
+  <div id="carousel" class="carousel">
+    <figure id="spin">
+  <div *ngFor="let photo of curentPhoto" class="carousel__element"><img src="{{photo.images.standard_resolution.url}}"> </div>
+    </figure>
+    </div>
+<div class="carousel__manager">
+<p (click)="carouselMove(carouselValRight)" id="plus" class="carousel__manager_right" #carouselValRight><i class="fas fa-arrow-alt-circle-right"></i></p>
+<p (click)="carouselMove(carouselValLeft)" id="minus" class="carousel__manager_left" #carouselValLeft><i class="fas fa-arrow-alt-circle-left"></i></p>
+  </div>
+</div>
+  
+  </div>
+  
+  <ng-template #loader>
+    <div class="load"></div>
+  </ng-template>

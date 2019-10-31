@@ -1,0 +1,7 @@
+<div class="about" *ngIf="loadAbout; else loader">
+  <h2>{{pageAboutValue.about_title}}</h2>
+  <p>{{pageAboutValue.about_us}}</p>
+  </div>
+  <ng-template #loader>
+    <div class="load"></div>
+  </ng-template>

@@ -1,0 +1,11 @@
+<div *ngIf="loadCurrency; else loader" class="currency">
+<h3>Exchange rate</h3>
+<span class="currency__description">Exchange rate on {{currentCurrency.date}} for 1 {{currentCurrency.base}}.</span>
+<div class="currency__element"><img src="../assets/images/united-states.png" alt="USD"> <span class="currency__code">USD</span> <span class="currency__value">{{currentCurrency.rates.USD}}</span></div>
+<div class="currency__element"><img src="../assets/images/united-kingdom.jpg" alt="GBP"><span class="currency__code">GBP</span> <span class="currency__value">{{currentCurrency.rates.GBP}}</span></div>
+<div class="currency__element"><img src="../assets/images/japan.jpg" alt="JPY"><span class="currency__code">JPY</span> <span class="currency__value">{{currentCurrency.rates.JPY}}</span></div>
+</div>
+
+<ng-template #loader>
+  <div class="load"></div>
+</ng-template>	
